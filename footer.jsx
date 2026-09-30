@@ -36,8 +36,8 @@ function Footer({ onNav }) {
           <h4 style={{ color: T.washi, marginBottom: 16, fontSize: 11, letterSpacing: '0.32em', fontFamily: 'var(--ff-body)', fontWeight: 700, textTransform: 'uppercase' }}>Contact</h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: 12, lineHeight: 2, color: 'rgba(245,245,240,.65)' }}>
             <li>+33 7 49 10 61 91</li>
-            <li>video@tengudrone.fr</li>
-            <li>www.tengudrone.fr</li>
+            <li>vol@tengudrone.com</li>
+            <li>www.tengudrone.com</li>
             <li>France entière</li>
           </ul>
         </div>
