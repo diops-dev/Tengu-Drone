@@ -107,12 +107,12 @@ function ContactPage({ onNav }) {
           </div>
           <div style={{ padding: 36, borderLeft: `1px solid ${T.rule}` }}>
             <Eyebrow num="弐">Email</Eyebrow>
-            <div style={{ fontFamily: 'var(--ff-display)', fontSize: 26, fontWeight: 700, color: T.ink, marginTop: 14, letterSpacing: '0.04em' }}>video@tengudrone.fr</div>
+            <div style={{ fontFamily: 'var(--ff-display)', fontSize: 26, fontWeight: 700, color: T.ink, marginTop: 14, letterSpacing: '0.04em' }}>vol@tengudrone.com</div>
             <div style={{ fontSize: 13, color: T.mist, marginTop: 8, lineHeight: 1.7 }}>Réponse sous 24 h</div>
           </div>
           <div style={{ padding: 36, borderLeft: `1px solid ${T.rule}` }}>
             <Eyebrow num="参">Web · zone</Eyebrow>
-            <div style={{ fontFamily: 'var(--ff-display)', fontSize: 26, fontWeight: 700, color: T.ink, marginTop: 14, letterSpacing: '0.04em' }}>www.tengudrone.fr</div>
+            <div style={{ fontFamily: 'var(--ff-display)', fontSize: 26, fontWeight: 700, color: T.ink, marginTop: 14, letterSpacing: '0.04em' }}>www.tengudrone.com</div>
             <div style={{ fontSize: 13, color: T.mist, marginTop: 8, lineHeight: 1.7 }}>France entière · déplacement au réel</div>
           </div>
         </div>
