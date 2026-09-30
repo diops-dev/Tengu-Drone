@@ -1,0 +1,166 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Marketing" name="UI Kit · Site Tengu Drone" subtitle="tengudrone.fr — site vitrine, 4 écrans" viewport="1320x900" -->
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tengu Drone — UI Kit (site)</title>
+<link rel="stylesheet" href="colors_and_type.css"/>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); overflow-x: hidden; }
+  #root { min-height: 100vh; }
+  a { color: inherit; }
+  a:hover { color: #9B2226; }
+  button { font: inherit; }
+  h1, h2, h3 { margin: 0; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="ui.jsx" data-presets="react"></script>
+<script type="text/babel" src="data.jsx" data-presets="react"></script>
+<script type="text/babel" src="nav.jsx" data-presets="react"></script>
+<script type="text/babel" src="hero.jsx" data-presets="react"></script>
+<script type="text/babel" src="service-card.jsx" data-presets="react"></script>
+<script type="text/babel" src="price-table.jsx" data-presets="react"></script>
+<script type="text/babel" src="contact-block.jsx" data-presets="react"></script>
+<script type="text/babel" src="footer.jsx" data-presets="react"></script>
+<script type="text/babel" src="pages.jsx" data-presets="react"></script>
+<script type="text/babel" src="legal.jsx" data-presets="react"></script>
+
+<script type="text/babel" data-presets="react">
+
+function HomePage({ onNav }) {
+  return (
+    <main style={{ background: T.washi }} data-screen-label="01 Home">
+      <Hero onNav={onNav}/>
+
+      {/* Services */}
+      <section id="services" style={{ padding: '96px 56px', maxWidth: 1320, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 56, marginBottom: 56 }}>
+          <Eyebrow num="一">Trois familles</Eyebrow>
+          <div>
+            <h2 style={{ fontFamily: 'var(--ff-display)', fontSize: 56, fontWeight: 700, color: T.ink, letterSpacing: '0.02em', lineHeight: 1.05, margin: 0 }}>
+              L'image aérienne, <span style={{ fontStyle: 'italic', color: T.lacquer }}>conduite comme une opération.</span>
+            </h2>
+            <p style={{ fontFamily: 'var(--ff-display)', fontSize: 19, fontStyle: 'italic', color: T.mist, marginTop: 18, maxWidth: 660 }}>
+              Vidéo, vidéo par drone et photographie : mariage et événementiel, studio et indoor. Quatorze prestations, une seule discipline.
+            </p>
+          </div>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 18 }}>
+          {FAMILIES.map((f) => (
+            <ServiceCard key={f.slug} num={f.num} name={f.kicker} ja={f.ja} desc={f.desc}
+              from={minPrice(f)} onClick={() => onNav("/services")}/>
+          ))}
+        </div>
+      </section>
+
+      {/* Featured prestation */}
+      <section style={{ background: T.sumi, color: T.washi, padding: '96px 56px', position: 'relative', overflow: 'hidden' }}>
+        <BambooGlow opacity={0.12}/>
+        <TechGrid size={80} opacity={0.05}/>
+        <div style={{ maxWidth: 1320, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center', position: 'relative', zIndex: 2 }}>
+          <div>
+            <Eyebrow num="二" onDark>Production haut de gamme</Eyebrow>
+            <h2 style={{ fontFamily: 'var(--ff-display)', fontSize: 56, fontWeight: 700, color: T.washi, marginTop: 18, lineHeight: 1.05, letterSpacing: '0.02em' }}>
+              Film promotionnel <span style={{ color: T.lacquer }}>8K ultra</span>
+            </h2>
+            <div style={{ fontFamily: 'var(--ff-jp-serif)', fontSize: 22, color: T.bamboo, marginTop: 12 }}>映像 · Marque, collectivité, campagne</div>
+            <p style={{ fontFamily: 'var(--ff-display)', fontSize: 19, fontStyle: 'italic', color: "#E2D4B7", marginTop: 22, maxWidth: 480, lineHeight: 1.5 }}>
+              Captation aérienne et sol, stabilisation trois axes, colorimétrie professionnelle. Repérage, plan de vol, montage : une production menée de bout en bout.
+            </p>
+            <div style={{
+              display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
+              marginTop: 36, paddingTop: 28, borderTop: '1px solid rgba(245,245,240,.18)',
+              fontFamily: 'var(--ff-mono)', fontSize: 13, color: T.washi,
+            }}>
+              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>Capteur</div>8K · gimbal-3</div>
+              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>Livraison</div>J+3 à J+7</div>
+              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>Dès</div>1 490 €</div>
+            </div>
+            <div style={{ marginTop: 36 }}>
+              <Button kind="ghostDark" onClick={() => onNav("/services")}>Services & tarifs</Button>
+            </div>
+          </div>
+          <div style={{ background: 'rgba(245,245,240,.04)', padding: 48, border: '1px solid rgba(245,245,240,.12)', position: 'relative' }}>
+            <CornerFrame color={T.bamboo} size={16} inset={10} style={{ padding: 36, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <img src="logo-invert.svg" style={{ width: '52%', height: 'auto' }} alt="Ha-Uchiwa"/>
+              <div style={{
+                marginTop: 28, paddingTop: 12, borderTop: '1px solid rgba(245,245,240,.18)',
+                display: 'flex', justifyContent: 'space-between', width: '100%', fontSize: 10, letterSpacing: '0.32em',
+                textTransform: 'uppercase', color: T.bamboo, fontFamily: 'var(--ff-body)',
+              }}>
+                <span>Catégorie Specific</span>
+                <span style={{ color: T.bamboo }}>Certifié DGAC</span>
+              </div>
+            </CornerFrame>
+          </div>
+        </div>
+      </section>
+
+      {/* Manifeste */}
+      <section style={{ padding: '96px 56px', maxWidth: 1320, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 56 }}>
+          <Eyebrow num="三">Manifeste</Eyebrow>
+          <div>
+            <div style={{ fontFamily: 'var(--ff-display)', fontSize: 36, fontWeight: 400, fontStyle: 'italic', color: T.sumi, lineHeight: 1.4, letterSpacing: '0.02em', maxWidth: 880 }}>
+              « La précision est un rituel. »
+            </div>
+            <div style={{ marginTop: 32, paddingTop: 24, borderTop: `1px solid ${T.rule}`, display: 'flex', justifyContent: 'space-between' }}>
+              <Tagline/>
+              <span style={{ fontFamily: 'var(--ff-jp-serif)', color: T.lacquer }}>精度は儀式である。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Inclus */}
+      <section style={{ padding: '0 56px 96px', maxWidth: 1320, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 56 }}>
+          <div>
+            <Eyebrow num="四">Inclus</Eyebrow>
+            <div style={{ fontSize: 12, color: T.mist, marginTop: 8, letterSpacing: 0.4 }}>Ce que comprend chaque prestation.</div>
+          </div>
+          <IncludedGrid/>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section style={{ padding: '0 56px 96px', maxWidth: 1320, margin: '0 auto' }}>
+        <ContactBlock/>
+      </section>
+
+      <Footer onNav={onNav}/>
+    </main>
+  );
+}
+
+function App() {
+  const [route, setRoute] = React.useState("/");
+  React.useEffect(() => { window.scrollTo(0, 0); }, [route]);
+  const onNav = (r) => setRoute(r);
+
+  const isHome = route === "/";
+  return (
+    <>
+      <Nav route={route} onNav={onNav} variant={isHome ? "transparent" : "solid"}/>
+      {route === "/" && <HomePage onNav={onNav}/>}
+      {route.startsWith("/services") && <ServicesPage onNav={onNav}/>}
+      {route === "/contact" && <ContactPage onNav={onNav}/>}
+      {route.startsWith("/legal") && <LegalPage route={route} onNav={onNav}/>}
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App/>);
+</script>
+
+</body>
+</html>
