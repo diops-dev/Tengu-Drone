@@ -1,0 +1,237 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   Tengu Drone — Design Tokens
+   "Precision is a ritual." · 精度は儀式である
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* Webfonts — Google CDN substitution.
+   Cormorant Garamond + Lato are the canonical brand families.
+   Noto Serif JP + Noto Sans JP are bilingual fallbacks (used inline for 日本語).
+   Replace via <link rel="stylesheet" href="..."> in HTML if you prefer to
+   self-host; the @import below is wrapped in GFONTS-BEGIN / GFONTS-END
+   markers for easy removal. */
+/* GFONTS-BEGIN */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700;900&display=swap");
+/* GFONTS-END */
+
+:root {
+  /* ─── Color · Primary palette (5 tokens, no negotiation) ─────────────── */
+  --t-ink:          #3C3489;  /* Encre de Nuit · primary 60%             */
+  --t-lacquer:      #9B2226;  /* Rouge Laque   · accent 6-15% · seal use */
+  --t-bamboo:       #C4A882;  /* Bambou Doré   · warm 10-15%             */
+  --t-washi:        #F5F5F0;  /* Washi         · surface 50%             */
+  --t-sumi:         #2D2D2D;  /* Sumi          · ink text 4-5%           */
+
+  /* ─── Color · Utility tints ──────────────────────────────────────────── */
+  --t-ink-900:      #1F1A52;
+  --t-ink-800:      #2A256B;
+  --t-ink-700:      #3C3489;  /* = --t-ink                                */
+  --t-ink-500:      #5547B8;
+  --t-ink-100:      #D6D2EC;
+
+  --t-laque-900:    #6F1518;
+  --t-laque-700:    #9B2226;  /* = --t-lacquer                            */
+  --t-laque-500:    #C73E42;
+
+  --t-bambou-500:   #C4A882;  /* = --t-bamboo                             */
+  --t-bambou-200:   #E2D4B7;
+
+  --t-washi-100:    #ECEAE0;
+  --t-mist:         #7B7591;  /* secondary text on light                  */
+
+  /* ─── Color · Semantic ───────────────────────────────────────────────── */
+  --bg:             #FFFFFF;
+  --bg-alt:         #F4F4F7;
+  --bg-inverse:     var(--t-ink);
+  --bg-sumi:        var(--t-sumi);
+
+  --fg:             var(--t-sumi);
+  --fg-2:           var(--t-mist);
+  --fg-3:           rgba(45, 45, 45, 0.45);
+  --fg-on-dark:     var(--t-washi);
+  --fg-2-on-dark:   var(--t-bambou-200);
+  --fg-3-on-dark:   rgba(245, 245, 240, 0.55);
+
+  --brand:          var(--t-ink);
+  --brand-hi:       var(--t-ink-500);
+  --accent:         var(--t-lacquer);     /* the seal — ponctuel, jamais surface */
+  --warm:           var(--t-bamboo);
+
+  --rule:           rgba(45, 45, 45, 0.16);
+  --rule-soft:      rgba(45, 45, 45, 0.08);
+  --rule-on-dark:   rgba(245, 245, 240, 0.18);
+
+  /* ─── Type · Families ────────────────────────────────────────────────── */
+  --ff-display:     "Cormorant Garamond", "Noto Serif JP", "EB Garamond", Georgia, serif;
+  --ff-body:        "Lato", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --ff-jp-serif:    "Noto Serif JP", "Yu Mincho", "ヒラギノ明朝", serif;
+  --ff-jp-sans:     "Noto Sans JP", "Yu Gothic", "ヒラギノ角ゴ", sans-serif;
+  --ff-mono:        ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* ─── Type · Size scale (px) ─────────────────────────────────────────── */
+  --fs-d1:          96px;   /* hero display                 */
+  --fs-d2:          72px;
+  --fs-h1:          56px;
+  --fs-h2:          40px;
+  --fs-h3:          28px;
+  --fs-h4:          21px;
+  --fs-s1:          21px;   /* italic subhead               */
+  --fs-body:        16px;
+  --fs-body-sm:     14px;
+  --fs-meta:        13px;
+  --fs-caps:        11px;   /* eyebrow / tagline            */
+  --fs-mono:        11.5px;
+
+  /* ─── Type · Weight ──────────────────────────────────────────────────── */
+  --fw-light:       300;
+  --fw-reg:         400;
+  --fw-med:         500;
+  --fw-bold:        700;
+  --fw-black:       900;
+
+  /* ─── Type · Tracking ────────────────────────────────────────────────── */
+  --ls-display:     0.02em;
+  --ls-h3:          0.04em;
+  --ls-tagline:     0.46em;   /* "PRECISION IS A RITUAL"     */
+  --ls-eyebrow:     0.42em;
+  --ls-caps:        0.32em;
+  --ls-wordmark:    0.22em;   /* T E N G U                    */
+
+  /* ─── Type · Leading ─────────────────────────────────────────────────── */
+  --lh-display:     0.95;
+  --lh-tight:       1.05;
+  --lh-snug:        1.3;
+  --lh-body:        1.7;
+
+  /* ─── Spacing scale (8pt) ────────────────────────────────────────────── */
+  --s-1:            4px;
+  --s-2:            8px;
+  --s-3:            12px;
+  --s-4:            16px;
+  --s-5:            24px;
+  --s-6:            32px;
+  --s-7:            48px;
+  --s-8:            64px;
+  --s-9:            96px;
+  --s-10:           128px;
+
+  /* ─── Radii (sparing — system favors flush corners) ──────────────────── */
+  --r-0:            0px;       /* default — flush, technical               */
+  --r-sm:           2px;        /* photo / case borders                     */
+  --r-md:           4px;        /* form inputs                              */
+  --r-pill:         999px;
+
+  /* ─── Borders ────────────────────────────────────────────────────────── */
+  --bw-hair:        0.5px;     /* technical hairlines, schematics          */
+  --bw-rule:        1px;       /* default rule                             */
+  --bw-strong:      2px;
+
+  /* ─── Shadow (used very sparingly — the system prefers rule + hue) ───── */
+  --sh-1:           0 1px 0 var(--rule-soft);
+  --sh-card:        0 1px 3px rgba(45,45,45,.05), 0 8px 24px rgba(45,45,45,.04);
+  --sh-elev:        0 8px 32px rgba(31, 26, 82, .18);
+  --sh-stamp:       0 0 0 1px var(--rule);
+
+  /* ─── Motion ─────────────────────────────────────────────────────────── */
+  --ease-out:       cubic-bezier(.2, .7, .3, 1);
+  --ease-in:        cubic-bezier(.7, .0, .9, .3);
+  --dur-fast:       150ms;
+  --dur-base:       240ms;
+  --dur-slow:       440ms;
+
+  /* ─── Layout ─────────────────────────────────────────────────────────── */
+  --container:      1320px;
+  --gutter:         56px;
+  --grid-unit:      80px;       /* the technical 80×80 grid overlay         */
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Semantic element styles
+   ───────────────────────────────────────────────────────────────────────── */
+html, body { background: var(--bg); color: var(--fg); }
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-display);
+  margin: 0;
+  color: var(--brand);
+}
+h1 { font-size: var(--fs-d1); line-height: var(--lh-display); letter-spacing: 0.01em; }
+h2 { font-size: var(--fs-h1); line-height: var(--lh-tight); }
+h3 { font-size: var(--fs-h3); line-height: 1.15;            letter-spacing: var(--ls-h3); }
+h4 {
+  font-family: var(--ff-body); font-size: var(--fs-caps);
+  font-weight: var(--fw-bold); letter-spacing: var(--ls-caps);
+  text-transform: uppercase; color: var(--fg);
+}
+
+p { margin: 0 0 1em; }
+.lead, .t-lead {
+  font-family: var(--ff-display);
+  font-size: 24px; font-style: italic; font-weight: var(--fw-reg);
+  line-height: 1.45; color: var(--fg);
+}
+
+/* Eyebrow — small caps label with a leading rule */
+.eyebrow, .t-eyebrow {
+  font: var(--fw-reg) var(--fs-caps)/1 var(--ff-body);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.eyebrow::before, .t-eyebrow::before {
+  content: ""; width: 28px; height: 1px;
+  background: currentColor; opacity: .6;
+}
+
+/* Tagline — small caps italic, extra tracked */
+.tagline, .t-tagline {
+  font: italic var(--fw-reg) 12px/1 var(--ff-body);
+  letter-spacing: var(--ls-tagline);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Wordmark — TENGU·DRONE composite */
+.wordmark {
+  font-family: var(--ff-display); font-weight: var(--fw-bold);
+  display: inline-flex; align-items: baseline; gap: 0.4em;
+  line-height: 1; white-space: nowrap; color: var(--brand);
+}
+.wordmark .tengu { letter-spacing: var(--ls-wordmark); }
+.wordmark .drone {
+  font-family: var(--ff-body); font-weight: var(--fw-reg);
+  letter-spacing: var(--ls-tagline); text-transform: uppercase;
+  color: var(--accent); font-size: 0.42em;
+}
+.wordmark.stack { flex-direction: column; align-items: center; gap: 4px; }
+.wordmark.stack .tengu { letter-spacing: 0.24em; }
+.wordmark.stack .drone { font-size: 0.32em; margin-top: 6px; }
+.wordmark.on-dark { color: var(--fg-on-dark); }
+.wordmark.on-dark .drone { color: var(--warm); }
+
+/* Japanese helper */
+.ja, .t-ja { font-family: var(--ff-jp-serif); }
+.ja-sans { font-family: var(--ff-jp-sans); }
+
+/* Mono — used for HEX codes, technical specs, fuselage markings */
+.mono, .t-mono {
+  font-family: var(--ff-mono); font-size: var(--fs-mono);
+  letter-spacing: 0.04em;
+}
+
+/* Hanko — the 天 seal stamp */
+.hanko {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--accent); color: var(--fg-on-dark);
+  font-family: var(--ff-jp-serif); font-weight: var(--fw-bold);
+  width: 2.5em; height: 2.5em; font-size: 24px; line-height: 1;
+}
