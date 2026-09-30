@@ -1,5 +1,4 @@
 // legal.jsx — mentions légales, politique de confidentialité, CGV.
-// Les champs entre crochets sont à compléter avec les données de l'entreprise.
 
 const LEGAL = {
   mentions: {
@@ -10,13 +9,13 @@ const LEGAL = {
     italic: "légales.",
     lead: "Éditeur, hébergement, propriété intellectuelle et médiation.",
     sections: [
-      { label: "Éditeur du site", text: "Tengu Drone — [forme juridique] au capital de [montant] €. Siège social : [adresse], Île-de-France. SIREN [n°] · RCS [ville]. TVA intracommunautaire : [n°]. Responsable de la publication : [nom]." },
-      { label: "Contact", text: "Téléphone : +33 7 49 10 61 91. Email : contact@tengudrone.fr. Site : www.tengudrone.fr." },
+      { label: "Éditeur du site", text: "Tengu Drone Émotion – Micro-entreprise. Siège social : Île-de-France. SIREN 507 812 576 · SIRET 507 812 576 000 68. Responsable de la publication : Frédéric." },
+      { label: "Contact", text: "Email : vol@tengudrone.com. Site : www.tengudrone.com." },
       { label: "Activité réglementée", text: "Opérateur de drones certifié DGAC, exploitation en catégorie Specific conformément aux règlements UE 2019/945 et 2019/947. Assurance responsabilité civile professionnelle (règl. UE 785/2004)." },
-      { label: "Hébergement", text: "Site hébergé par [hébergeur], [adresse de l'hébergeur], [téléphone]." },
-      { label: "Propriété intellectuelle", text: "L'ensemble des contenus du site — textes, photographies, vidéos, marques et logo — est la propriété de Tengu Drone. Toute reproduction ou diffusion, totale ou partielle, sans autorisation écrite préalable est interdite." },
-      { label: "Réalisation", text: "Conception et réalisation du site : Shorai Consulting." },
-      { label: "Médiation", text: "En cas de litige avec un client consommateur, recours possible au médiateur de la consommation : [nom et coordonnées du médiateur], dans un délai d'un an à compter de la réclamation écrite." },
+      { label: "Hébergement", text: "Site hébergé par Hostinger." },
+      { label: "Propriété intellectuelle", text: "L'ensemble des contenus du site (textes, photographies, vidéos, marques et logo) est la propriété de Tengu Drone Émotion. Toute reproduction ou diffusion, totale ou partielle, sans autorisation écrite préalable est interdite." },
+      { label: "Réalisation", text: "Conception et réalisation du site : ", link: { label: "Shorai Consulting", url: "https://shorai-group.com" } },
+      { label: "Médiation", text: "En cas de litige avec un client consommateur, recours possible au médiateur de la consommation, dans un délai d'un an à compter de la réclamation écrite." },
     ],
   },
   confidentialite: {
@@ -27,13 +26,13 @@ const LEGAL = {
     italic: "confidentialité.",
     lead: "Ce que nous collectons, pourquoi, combien de temps, et comment exercer vos droits.",
     sections: [
-      { label: "Responsable de traitement", text: "Tengu Drone, [adresse], Île-de-France. Contact : contact@tengudrone.fr." },
+      { label: "Responsable de traitement", text: "Tengu Drone Émotion, Île-de-France. Contact : vol@tengudrone.com." },
       { label: "Données collectées", text: "Via le formulaire de devis : nom, société, email, téléphone, description de la mission. Via la navigation : données techniques strictement nécessaires au fonctionnement du site." },
       { label: "Finalités et base légale", text: "Répondre aux demandes de devis et gérer la relation client (exécution du contrat ou intérêt légitime). Aucune donnée n'est utilisée à des fins publicitaires sans consentement." },
       { label: "Durées de conservation", text: "Demandes de devis sans suite : 12 mois. Dossiers clients et documents comptables : 10 ans, conformément aux obligations légales. Images et rushes : conservés selon l'autorisation de diffusion accordée." },
       { label: "Destinataires", text: "Les données ne sont ni vendues ni cédées. Elles peuvent être transmises aux prestataires techniques nécessaires (hébergement, messagerie, comptabilité), agissant sur instruction et dans l'Union européenne." },
       { label: "Prises de vue aériennes", text: "Les captations sont réalisées dans le respect du droit à l'image et de la vie privée. Les personnes identifiables sur des images destinées à diffusion font l'objet d'une autorisation, ou d'un floutage à défaut." },
-      { label: "Vos droits", text: "Accès, rectification, effacement, limitation, opposition et portabilité : écrire à contact@tengudrone.fr. Réponse sous un mois. Réclamation possible auprès de la CNIL (www.cnil.fr)." },
+      { label: "Vos droits", text: "Accès, rectification, effacement, limitation, opposition et portabilité : écrire à vol@tengudrone.com. Réponse sous un mois. Réclamation possible auprès de la CNIL (www.cnil.fr)." },
       { label: "Cookies", text: "Le site n'utilise que des cookies techniques nécessaires à son fonctionnement. Aucun traceur publicitaire ou de mesure d'audience n'est déposé sans consentement préalable." },
     ],
   },
@@ -45,7 +44,7 @@ const LEGAL = {
     italic: "de vente.",
     lead: "Devis, réservation, réalisation, livrables et droits d'utilisation des images.",
     sections: [
-      { label: "Objet", text: "Les présentes conditions régissent les prestations de captation photo et vidéo, aériennes et au sol, réalisées par Tengu Drone. Toute commande implique leur acceptation sans réserve." },
+      { label: "Objet", text: "Les présentes conditions régissent les prestations de captation photo et vidéo, aériennes et au sol, réalisées par Tengu Drone Émotion. Toute commande implique leur acceptation sans réserve." },
       { label: "Devis et prix", text: "Prix indicatifs HT, hors options. Chaque devis est personnalisé selon la complexité, la zone et les livrables. Le devis est gratuit, émis sous 24 h et valable 30 jours à compter de son émission. Seul le devis signé fait foi." },
       { label: "Réservation et paiement", text: "Acompte de 30 % à la commande, solde à la livraison. Le créneau est confirmé après réception de l'acompte. Paiement par virement sous 30 jours ; pénalités de retard au taux légal et indemnité forfaitaire de 40 € en cas de retard." },
       { label: "Zone d'intervention", text: "France entière. Frais de déplacement facturés au réel selon la mission." },
@@ -69,7 +68,7 @@ function LegalPage({ route, onNav }) {
       <section style={{ padding: '80px 56px 96px', maxWidth: 1320, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 56, alignItems: 'start' }}>
           <div style={{ position: 'sticky', top: 32 }}>
-            <Eyebrow num="条">Documents</Eyebrow>
+            <Eyebrow num="四">Documents</Eyebrow>
             <ul style={{ listStyle: 'none', padding: 0, margin: '18px 0 0', display: 'grid', gap: 10 }}>
               {Object.values(LEGAL).map((d) => (
                 <li key={d.slug}>
@@ -90,7 +89,15 @@ function LegalPage({ route, onNav }) {
             {doc.sections.map((s, i) => (
               <div key={s.label} style={{ padding: '28px 32px', borderTop: i ? `1px solid ${T.rule}` : 'none' }}>
                 <div style={{ fontSize: 10, letterSpacing: '0.42em', textTransform: 'uppercase', color: T.lacquer }}>{s.label}</div>
-                <p style={{ fontSize: 14, color: T.sumi, marginTop: 10, lineHeight: 1.75, maxWidth: 820 }}>{s.text}</p>
+                <p style={{ fontSize: 14, color: T.sumi, marginTop: 10, lineHeight: 1.75, maxWidth: 820 }}>
+                  {s.text}
+                  {s.link && (
+                    <a href={s.link.url} target="_blank" rel="noopener noreferrer"
+                      style={{ color: T.lacquer, textDecoration: 'none', fontWeight: 600, borderBottom: `1px solid ${T.lacquer}` }}>
+                      {s.link.label}
+                    </a>
+                  )}
+                </p>
               </div>
             ))}
           </div>
