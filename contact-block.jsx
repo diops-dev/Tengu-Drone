@@ -48,7 +48,7 @@ function ContactBlock({ onSubmit }) {
           </p>
           <div style={{ fontFamily: 'var(--ff-mono)', fontSize: 12, color: T.sumi, marginTop: 20, lineHeight: 1.9 }}>
             +33 7 49 10 61 91<br/>
-            contact@tengudrone.fr<br/>
+            vol@tengudrone.com<br/>
             France entière
           </div>
         </div>
