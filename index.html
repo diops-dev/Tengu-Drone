@@ -1,10 +1,12 @@
 <!doctype html>
-<!-- @dsCard group="UI Kit — Marketing" name="UI Kit · Site Tengu Drone" subtitle="tengudrone.fr — site vitrine, 4 écrans" viewport="1320x900" -->
+<!-- @dsCard group="UI Kit â Marketing" name="UI Kit Â· Site Tengu Drone" subtitle="tengudrone.fr â site vitrine, 4 Ã©crans" viewport="1320x900" -->
 <html lang="fr">
 <head>
-<meta charset="utf-8"/>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tengu Drone — UI Kit (site)</title>
+<title>Tengu Drone â UI Kit (site)</title>
 <link rel="stylesheet" href="colors_and_type.css"/>
 <style>
   * { box-sizing: border-box; }
@@ -43,13 +45,13 @@ function HomePage({ onNav }) {
       {/* Services */}
       <section id="services" style={{ padding: '96px 56px', maxWidth: 1320, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 56, marginBottom: 56 }}>
-          <Eyebrow num="一">Trois familles</Eyebrow>
+          <Eyebrow num="ä¸">Trois familles</Eyebrow>
           <div>
             <h2 style={{ fontFamily: 'var(--ff-display)', fontSize: 56, fontWeight: 700, color: T.ink, letterSpacing: '0.02em', lineHeight: 1.05, margin: 0 }}>
-              L'image aérienne, <span style={{ fontStyle: 'italic', color: T.lacquer }}>conduite comme une opération.</span>
+              L'image aÃ©rienne, <span style={{ fontStyle: 'italic', color: T.lacquer }}>conduite comme une opÃ©ration.</span>
             </h2>
             <p style={{ fontFamily: 'var(--ff-display)', fontSize: 19, fontStyle: 'italic', color: T.mist, marginTop: 18, maxWidth: 660 }}>
-              Vidéo, vidéo par drone et photographie : mariage et événementiel, studio et indoor. Quatorze prestations, une seule discipline.
+              VidÃ©o, vidÃ©o par drone et photographie : mariage et Ã©vÃ©nementiel, studio et indoor. Quatorze prestations, une seule discipline.
             </p>
           </div>
         </div>
@@ -67,22 +69,22 @@ function HomePage({ onNav }) {
         <TechGrid size={80} opacity={0.05}/>
         <div style={{ maxWidth: 1320, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center', position: 'relative', zIndex: 2 }}>
           <div>
-            <Eyebrow num="二" onDark>Production haut de gamme</Eyebrow>
+            <Eyebrow num="äº" onDark>Production haut de gamme</Eyebrow>
             <h2 style={{ fontFamily: 'var(--ff-display)', fontSize: 56, fontWeight: 700, color: T.washi, marginTop: 18, lineHeight: 1.05, letterSpacing: '0.02em' }}>
               Film promotionnel <span style={{ color: T.lacquer }}>8K ultra</span>
             </h2>
-            <div style={{ fontFamily: 'var(--ff-jp-serif)', fontSize: 22, color: T.bamboo, marginTop: 12 }}>映像 · Marque, collectivité, campagne</div>
+            <div style={{ fontFamily: 'var(--ff-jp-serif)', fontSize: 22, color: T.bamboo, marginTop: 12 }}>æ å Â· Marque, collectivitÃ©, campagne</div>
             <p style={{ fontFamily: 'var(--ff-display)', fontSize: 19, fontStyle: 'italic', color: "#E2D4B7", marginTop: 22, maxWidth: 480, lineHeight: 1.5 }}>
-              Captation aérienne et sol, stabilisation trois axes, colorimétrie professionnelle. Repérage, plan de vol, montage : une production menée de bout en bout.
+              Captation aÃ©rienne et sol, stabilisation trois axes, colorimÃ©trie professionnelle. RepÃ©rage, plan de vol, montage : une production menÃ©e de bout en bout.
             </p>
             <div style={{
               display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
               marginTop: 36, paddingTop: 28, borderTop: '1px solid rgba(245,245,240,.18)',
               fontFamily: 'var(--ff-mono)', fontSize: 13, color: T.washi,
             }}>
-              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>Capteur</div>8K · gimbal-3</div>
-              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>Livraison</div>J+3 à J+7</div>
-              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>Dès</div>1 490 €</div>
+              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>Capteur</div>8K Â· gimbal-3</div>
+              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>Livraison</div>J+3 Ã  J+7</div>
+              <div><div style={{ fontFamily: 'var(--ff-body)', fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: T.bamboo, marginBottom: 8 }}>DÃ¨s</div>1 490 â¬</div>
             </div>
             <div style={{ marginTop: 36 }}>
               <Button kind="ghostDark" onClick={() => onNav("/services")}>Services & tarifs</Button>
@@ -96,8 +98,8 @@ function HomePage({ onNav }) {
                 display: 'flex', justifyContent: 'space-between', width: '100%', fontSize: 10, letterSpacing: '0.32em',
                 textTransform: 'uppercase', color: T.bamboo, fontFamily: 'var(--ff-body)',
               }}>
-                <span>Catégorie Specific</span>
-                <span style={{ color: T.bamboo }}>Certifié DGAC</span>
+                <span>CatÃ©gorie Specific</span>
+                <span style={{ color: T.bamboo }}>CertifiÃ© DGAC</span>
               </div>
             </CornerFrame>
           </div>
@@ -107,14 +109,14 @@ function HomePage({ onNav }) {
       {/* Manifeste */}
       <section style={{ padding: '96px 56px', maxWidth: 1320, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 56 }}>
-          <Eyebrow num="三">Manifeste</Eyebrow>
+          <Eyebrow num="ä¸">Manifeste</Eyebrow>
           <div>
             <div style={{ fontFamily: 'var(--ff-display)', fontSize: 36, fontWeight: 400, fontStyle: 'italic', color: T.sumi, lineHeight: 1.4, letterSpacing: '0.02em', maxWidth: 880 }}>
-              « La précision est un rituel. »
+              Â« La prÃ©cision est un rituel. Â»
             </div>
             <div style={{ marginTop: 32, paddingTop: 24, borderTop: `1px solid ${T.rule}`, display: 'flex', justifyContent: 'space-between' }}>
               <Tagline/>
-              <span style={{ fontFamily: 'var(--ff-jp-serif)', color: T.lacquer }}>精度は儀式である。</span>
+              <span style={{ fontFamily: 'var(--ff-jp-serif)', color: T.lacquer }}>ç²¾åº¦ã¯åå¼ã§ããã</span>
             </div>
           </div>
         </div>
@@ -124,7 +126,7 @@ function HomePage({ onNav }) {
       <section style={{ padding: '0 56px 96px', maxWidth: 1320, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 56 }}>
           <div>
-            <Eyebrow num="四">Inclus</Eyebrow>
+            <Eyebrow num="å">Inclus</Eyebrow>
             <div style={{ fontSize: 12, color: T.mist, marginTop: 8, letterSpacing: 0.4 }}>Ce que comprend chaque prestation.</div>
           </div>
           <IncludedGrid/>
